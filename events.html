@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <link rel="stylesheet" href="events.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://ewscripps.brightspotcdn.com/c4/a6/6a9a9c244ab7b8c5aeb96d79ebc0/download.png" class="d-block w-100" alt="Roller Coaster">
+                <div class="carousel-caption d-none d-md-block" style="background-color: rgb(59, 59, 59); opacity: 0.68;">
+                    <h5 style="color:white; font-size: 45px">Roller Coaster</h5>
+                    <p style="color:white; font-size: 25px">Enjoy the roller coaster ride and have great fun with your companions.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://i.pinimg.com/originals/6d/b0/79/6db079a1b9aac81420d7ccf3b8cd2c2d.jpg" class="d-block w-100" alt="Water Slide">
+                <div class="carousel-caption d-none d-md-block" style="background-color: rgb(59, 59, 59); opacity: 0.68;">
+                    <h5 style="color:white; font-size: 45px">Water Ride</h5>
+                    <p style="color:white; font-size: 25px">Beat the heat with amazing water rides at our park.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/a9/9f.jpg" class="d-block w-100" alt="7D show">
+                <div class="carousel-caption d-none d-md-block" style="background-color: rgb(59, 59, 59); opacity: 0.68;">
+                    <h5 style="color:white; font-size: 45px">7-D Cinemas</h5>
+                    <p style="color:white; font-size: 25px">Experience mind blowing technology our 7-D Cinemas</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://mydinosaurs.com/wp-content/uploads/2018/04/Chicago-Museums-600x337.jpg" class="d-block w-100" alt="Museum">
+                <div class="carousel-caption d-none d-md-block" style="background-color: rgb(59, 59, 59); opacity: 0.68;">
+                    <h5 style="color:white; font-size: 45px">Museum</h5>
+                    <p style="color:white; font-size: 25px">Explore the heritage of wanderers on Earth before Humans. </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.littledayout.com/wp-content/uploads/e-dinoeye.png?x43858" class="d-block w-100" alt="Big Wheel">
+                <div class="carousel-caption d-none d-md-block" style="background-color: rgb(59, 59, 59); opacity: 0.68;">
+                    <h5 style="color:white; font-size: 45px">Ferris Wheel</h5>
+                    <p style="color:white; font-size: 25px">Take a seat and relax and capture mesmerising views of the park with the ferris wheel.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://danielfooddiary.com/wp-content/uploads/2020/11/jurassicworldcafe1.jpg" class="d-block w-100" alt="Food Park">
+                <div class="carousel-caption d-none d-md-block" style="background-color: rgb(59, 59, 59); opacity: 0.68;">
+                    <h5 style="color:white; font-size: 45px">Food Park</h5>
+                    <p style="color:white; font-size: 25px">Get the cuisine of your choice prepared by experienced chefs in highest quality.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Roller Coaster
+            </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">One of a kind fun-filled ride.It is open from
+                    <strong>10am-6pm</strong>(with a special ride at 8pm on weekends.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Water Rides
+            </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Beat the summer heat with extravagant water rides.Open from <strong>9am-5pm</strong>.Open on all seven days of the week.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              7-D Cinemas
+            </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Experience virtual reality like never before with our breathtaking technologies.Timings<strong>11am-4pm</strong>Closed on weekeneds</div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Museum
+            </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Checkout the heritage of these mammals with fossil proofs at our museum.Open from<strong>11am-4pm</strong>.Closed on weekends</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              Ferris Wheel
+            </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Enjoy a spectacular view of the park with our ferris wheel and sit backa and relax.Open from <strong>10 am-5pm</strong>Open on all seven days of the week.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+              Food Park
+            </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Enjoy delicious food thta is easy to carry prepared by professiosnal chefs.Open from <strong>9am-9pm</strong>Open on all 7 days of the week.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
