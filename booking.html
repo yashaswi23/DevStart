@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        #wrapper {
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .payment {
+            display: flex;
+            width: 95vw;
+            height: 95vh;
+            box-shadow: 0px 0px 80px 45px rgba(0, 0, 0, 0.2);
+        }
+        
+        .payment_product {
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            width: 40%;
+            height: 100%;
+            background-color: #232F3E;
+            background-image: url(http://farm9.static.flickr.com/8311/8074062411_bd9c58d2d8_b.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        
+        .payment_bill {
+            padding: 40px;
+            width: 80%;
+            height: 100%;
+            background-color: whitesmoke;
+        }
+        
+        .price {
+            background-color: #40454b;
+            color: white;
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 22px;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+        
+        h3 {
+            color: black;
+            font-weight: 400;
+            font-size: 50px;
+        }
+        
+        ul {
+            font-size: 20px;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        
+        li {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.8;
+            color: black;
+        }
+        
+        li:nth-last-child(1) {
+            color: black;
+            font-weight: 2000;
+        }
+        
+        hr {
+            border-color: black;
+            border-width: 2px;
+            border-style: dashed;
+        }
+        
+        .payment_form input,
+        select {
+            border: none;
+            color: white;
+            border-radius: 2px;
+            background-color: #232F3E;
+            padding: 10px 10px;
+            width: 32%;
+        }
+        
+        .payment_form .form_input {
+            display: flex;
+            color: white;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .payment_form button {
+            width: 100%;
+            border: none;
+            color: white;
+            background-color: #232F3E;
+            padding: 15px 0;
+            font-size: 20px;
+        }
+        
+        body {
+            background: #ddd;
+            font-family: "Raleway";
+        }
+        
+        .center {
+            position: absolute;
+            top: 87.5%;
+            left: 64%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .popup {
+            width: 350px;
+            height: 280px;
+            padding: 30px 20px;
+            background: #f5f5ff;
+            border-radius: 10px;
+            box-sizing: border-box;
+            z-index: 2;
+            text-align: center;
+            opacity: 0;
+            top: -200%;
+            transform: translate(-50%, -50%) scale(0.5);
+            transition: opacity 300ms ease-in-out, top 1000ms ease-in-out transform 1000ms ease-in-out;
+        }
+        
+        .popup.active {
+            opacity: 1;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+        }
+        
+        .popup .icon {
+            margin: 5px 0;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #34f234;
+            text-align: center;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        
+        .popup .icon i.fa {
+            font-size: 30px;
+            color: #34f234;
+        }
+        
+        .popup .title {
+            margin: 5px 0;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        
+        .popup .description {
+            color: #222;
+            font-size: 15px;
+            padding: 5px;
+        }
+        
+        .popup .dismiss-btn {
+            margin-top: 15px;
+        }
+        
+        .popup .dismiss-btn button {
+            padding: 10px 20px;
+            background: #111;
+            color: #f5f5f5;
+            border: 2px solid #111;
+            font-size: 16px;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 300ms ease-in-out;
+        }
+        
+        .popup .dismiss-btn button:hover {
+            color: #111;
+            background: #f5f5f5;
+        }
+        
+        .popup>div {
+            position: relative;
+            top: 10px;
+            opacity: 0;
+        }
+        
+        .popup.active>div {
+            top: 0px;
+            opacity: 1;
+        }
+        
+        .popup.active .icon {
+            transition: all 300ms ease-in-out 250ms;
+        }
+        
+        .popup.active .title {
+            transition: all 300ms ease-in-out 300ms;
+        }
+        
+        .popup.active .description {
+            transition: all 300ms ease-in-out 350ms;
+        }
+        
+        .popup.active .dismiss-btn {
+            transition: all 300ms ease-in-out 400ms;
+        }
+        
+        #open-popup-btn {
+            width: 600px;
+            border: none;
+            color: white;
+            background-color: #232F3E;
+            padding: 15px 0;
+            font-size: 20px;
+        }
+        
+        .quantity button {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            color: #000;
+            border-radius: 0;
+            background: #fff
+        }
+        
+        .quantity input {
+            border: none;
+            border-top: 0.5px solid #000;
+            border-bottom: 0.5px solid #000;
+            text-align: center;
+            width: 100px;
+            font-size: 20px;
+            color: #000;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+        <div class="payment">
+            <div class="payment_product">
+                <div>
+                    <h2>Tickets</h2>
+                    <div class="price">
+                        ₹5000/-
+                    </div>
+                </div>
+            </div>
+            <div class="payment_bill">
+                <h3Book Tickets Now!</h3>
+                    <ul>
+                        <li>
+                            <span>₹5000x 1 item</span>
+                            <span>₹5000</span>
+                        </li>
+                        <li>
+                            <span>Dicounts</span>
+                            <span>None</span>
+                        </li>
+                        <li>
+                            <span>Select no. of tickets</span>
+                            <div class="quantity">
+                                <button class="btn minus-btn disabled" type="button">-</button>
+                                <input type="text" id="quantity" value="1">
+                                <button class="btn plus-btn" type="button">+</button>
+                            </div>
+                        </li>
+                        <li>
+                            <span>SubTotal</span>
+                            <p class='total-price'><span id="price">5000</span> </p>
+                        </li>
+                        <li>
+                            <span>Tax and GST</span>
+                            <span id='gst'>500</span>
+                        </li>
+                        <li><span>Grand Total </span>
+                            <p class='tpr'> <span id='ava'>5500</span> </p>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Payment Information</h3>
+                    <form action="/" class="payment_form">
+                        <div class="form_input">
+                            <input type="text" placeholder="Card Number / Card Name" style="width: 100%;">
+                        </div>
+                        <div class="form_input">
+                            <select>
+                            <option>Month</option>
+                            <option>Jan</option>
+                            <option>Feb</option>
+                            <option>Mar</option>
+                            <option>Apr</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>Aug</option>
+                            <option>Sep</option>
+                            <option>Oct</option>
+                            <option>Nov</option>
+                            <option>Dec</option>
+                        </select>
+                            <select>
+                            <option>Year</option>
+                            <option>2030</option>
+                            <option>2031</option>
+                            <option>2032</option>
+                            <option>2033</option>
+                            <option>2034</option>
+                            <option>2035</option>
+                            <option>2036</option>
+                            <option>2037</option>
+                            <option>2038</option>
+                            <option>2039</option>
+                            <option>2040</option>
+                        </select>
+                            <input type="text" placeholder="CVV">
+                        </div>
+
+                    </form>
+            </div>
+        </div>
+    </div>
+    <div class="popup center">
+        <div class="icon">
+            <i class="fa fa-check" style="margin-top:10px;"></i>
+        </div>
+        <div class="title">Success!!</div>
+        <div class="description">
+            Your Tickets Are Booked Successfully.
+        </div>
+        <div class="dismiss-btn">
+            <button id="dismiss-popup-btn">Yayyyy!</button>
+        </div>
+    </div>
+    <div class="center">
+        <button id="open-popup-btn">Order Now</button>
+    </div>
+    </div>
+    <script>
+        alert("Welcome To Dino World! All bookings are done keeping in mind the COVID-19 guidelines. We wish you a safe visit.")
+        document.getElementById("open-popup-btn").addEventListener('click', () => {
+            document.querySelector('.popup').classList.add("active");
+        })
+        document.getElementById("dismiss-popup-btn").addEventListener("click", () => {
+
+            document.querySelector(".popup").classList.remove("active");
+        })
+    </script>
+
+    <script>
+        //setting default attribute to disabled of minus button
+        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+
+        //taking value to increment decrement input value
+        var valueCount
+
+        //taking price value in variable
+        var price = document.getElementById("price").innerText;
+
+        //price calculation function
+        function priceTotal() {
+            var total = valueCount * price;
+            document.getElementById("price").innerText = total
+        }
+
+        //Grand total
+        var GrandTotal = document.getElementById("ava").innerText;
+
+
+        function grandprice() {
+            var GrandTotal = (valueCount * price) + 500
+            document.getElementById("ava").innerText = GrandTotal
+        }
+
+
+        //plus button
+        document.querySelector(".plus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment by 1
+            valueCount++;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount;
+
+            if (valueCount > 1) {
+                document.querySelector(".minus-btn").removeAttribute("disabled");
+                document.querySelector(".minus-btn").classList.remove("disabled")
+            }
+
+            //calling price function
+            priceTotal()
+
+            //calling GrandTotal
+            grandprice()
+        })
+
+        //plus button
+        document.querySelector(".minus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment by 1
+            valueCount--;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount
+
+            if (valueCount == 1) {
+                document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+            }
+
+            //calling price function
+            priceTotal()
+
+            //calling GrandTotal
+            grandprice()
+        })
+    </script>
+</body>
+
+</html>
