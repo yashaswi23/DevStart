@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awsome linking:-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>About_Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #bdbdbd;
+        }
+        
+        .about-section {
+            background: url(https://media.istockphoto.com/vectors/dinosaur-park-banner-with-jurassic-animal-sketch-vector-id1033045336?k=6&m=1033045336&s=612x612&w=0&h=Y1D0XkWRRtR6V-kP2d29_JqznBJE7sKymneyQI19ViQ=) no-repeat left;
+            background-size: 55%;
+            background-color: #fdfdfd;
+            overflow: hidden;
+            padding: 150px 0;
+        }
+        
+        .inner-container {
+            width: 55%;
+            float: right;
+            background-color: #fdfdfd;
+            padding: 150px;
+        }
+        
+        .inner-container h1 {
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        
+        .text {
+            font-size: 13px;
+            color: #545454;
+            line-height: 30px;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+        
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        
+        @media screen and (max-width:1200px) {
+            .inner-container {
+                padding: 80px;
+            }
+        }
+        
+        @media screen and (max-width:1000px) {
+            .about-section {
+                background-size: 100%;
+                padding: 100px 40px;
+            }
+            .inner-container {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            .about-section {
+                padding: 150px;
+                background-size: 100%;
+            }
+            .inner-container {
+                padding: 60px;
+            }
+        }
+        
+        .footer__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            max-width: max-content;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100px;
+            color: #000000;
+            line-height: 0;
+            font-size: 1rem;
+            margin-top: -15px;
+        }
+        
+        .logos {
+            padding: 0 10px;
+            size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-section">
+        <div class="inner-container">
+            <h1> About Us </h1>
+            <p class="text">
+                Dino World is a theme and amusement park. It is a amusement park with animatronic dinosaurs. The dinosaur park is a great way to learn and explore dinosaurs. There’s a food park serving vegetarian and non-vegetarian dishes, milkshakes and juices. The
+                theme park offers an array of rides, the most fun one being the Dino Ride, where you can ride a mechanical dinosaur! The theme park also allows you to host birthday parties and other events on their premises.
+            </p>
+            <div class="skills">
+                <span>
+                    Follow Us.
+                    <div class="logos">
+                        <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> </a>
+                        <a href="https://www.facebook.com/"> <i class="fab fa-facebook"></i> </a> 
+                        <a href="https://www.twitter.com/"> <i class="fab fa-twitter"></i> </a>
+                    </div>
+                </span>
+                <span> To know more: </span>
+                <span>  <a class="footer__btn" href="index.html" target="_blank">Contact Us</a>  </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
