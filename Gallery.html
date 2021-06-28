@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: sans-serif;
+        }
+        
+        .header {
+            height: 150px;
+            width: 100vw;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            box-sizing: border-box;
+        }
+        
+        .header h2 {
+            outline: none;
+            position: relative;
+            font-size: 6em;
+            letter-spacing: 15px;
+            color: grey;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+            line-height: 0.70em;
+            animation: animate 5s linear infinite;
+        }
+        
+        .box {
+            background: rgb(65, 15, 15);
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+        }
+        
+        @keyframes animate {
+            0%,
+            18%,
+            20%,
+            50.1%,
+            60%,
+            65.1%,
+            80%,
+            90.1%,
+            92% {
+                color: black;
+                box-shadow: none;
+            }
+            18.1%,
+            20.1%,
+            30%,
+            50%,
+            60.1%,
+            65%,
+            80.1%,
+            98%,
+            92.1%,
+            100% {
+                color: rgb(255, 255, 255);
+                text-shadow: 0 0 10px rgb(252, 253, 200), 0 0 20px rgb(252, 253, 200), 0 0 40px rgb(252, 253, 200), 0 0 80px rgb(252, 253, 200), 0 0 10px rgb(252, 253, 200);
+            }
+        }
+        
+        .end {
+            height: 200px;
+            width: 100vw;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        
+        .end h2 {
+            outline: none;
+            position: relative;
+            font-size: 6em;
+            letter-spacing: 15px;
+            color: rgb(255, 0, 0);
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+            line-height: 0.70em;
+            animation: animation 5s linear infinite;
+        }
+        
+        @keyframes animation {
+            0%,
+            18%,
+            20%,
+            50.1%,
+            60%,
+            65.1%,
+            80%,
+            90.1%,
+            92% {
+                color: rgb(255, 0, 0);
+                box-shadow: none;
+            }
+            18.1%,
+            20.1%,
+            30%,
+            50%,
+            60.1%,
+            65%,
+            80.1%,
+            98%,
+            92.1%,
+            100% {
+                color: rgb(255, 102, 0);
+                text-shadow: 0 0 10px rgb(255, 102, 0), 0 0 20px rgb(255, 102, 0), 0 0 40px rgb(252, 253, 200), 0 0 80px rgb(252, 253, 200), 0 0 10px rgb(252, 253, 200);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class='header'>
+        <h2> GALLERIA </h2>
+    </div>
+
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://4.bp.blogspot.com/-KTH0lsD6pAw/WR_cef0NG-I/AAAAAAAAB1Y/6FRefTAmhRcNkAr_9bdNA4VcyywcVC7XgCLcB/s1600/the-prehistoric-times.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.boardgamequest.com/wp-content/uploads/2019/09/Dino-World.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="http://images6.fanpop.com/image/photos/38400000/Jurassic-News-jurassic-park-38401889-1212-1645.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://lh3.googleusercontent.com/proxy/Y6DYQ25u0h1OAB6BR2btY8W84A8A-eSflOFwFXTD9sNAGmZ24e1I9vEG2MAtG5yQJC4CDBkd-oKBKBXM2-YOabQl5kENSVJLmKWsvp0bD5i9_frkzd_NKBvroh8CQ2MF6VHMud7mDbYv48jwmVROMkMa1yNDdw=s0-d" />
+            </div>
+            <div class="swiper-slide">
+                <img src="http://images6.fanpop.com/image/photos/38400000/Jurassic-News-jurassic-park-38401913-1212-1645.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.nps.gov/articles/000/images/Fig-2-sm-Ad-w-Dino.jpg?maxwidth=1200&autorotate=false" />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="end">
+        <h2> DINO WORLD </h2>
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>
