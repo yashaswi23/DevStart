@@ -116,7 +116,7 @@
             width: 100%;
             text-align: center;
             -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
-            line-height: 0.70em;
+            line-height: 0.90em;
             animation: animation 5s linear infinite;
         }
         
@@ -145,6 +145,19 @@
             100% {
                 color: rgb(255, 102, 0);
                 text-shadow: 0 0 10px rgb(255, 102, 0), 0 0 20px rgb(255, 102, 0), 0 0 40px rgb(252, 253, 200), 0 0 80px rgb(252, 253, 200), 0 0 10px rgb(252, 253, 200);
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            .header {
+                height: 150px;
+                width: 100vw;
+            }
+            .header h2 {
+                font-size: 4em;
+            }
+            .end h2 {
+                font-size: 4em;
             }
         }
     </style>
