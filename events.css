@@ -1,0 +1,17 @@
+.carousel-item img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.carousel-caption d-none d-md-block {
+    background-color: rgb(59, 59, 59);
+    opacity: 0.68;
+}
+
+.carousel-caption d-none d-md-block h5 {
+    color: white !important;
+}
+
+.carousel-caption d-none d-md-block p {
+    color: white !important;
+}
